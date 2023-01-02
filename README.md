@@ -1,4 +1,4 @@
-# example-extension-javascript
+# groot
 
 ## Project setup
 #### React:
