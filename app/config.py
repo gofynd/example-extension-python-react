@@ -12,7 +12,6 @@ class Config(BaseSettings):
     PORT: int
     EXTENSION_API_KEY: str
     EXTENSION_API_SECRET: str
-    EXTENSION_BASE_URL: str
     EXTENSION_CLUSTER_URL: str
 
     ROOT_DIR = os.path.dirname(os.path.dirname(__file__))
