@@ -1,4 +1,4 @@
-fdk_extension@git+https://github.com/gofynd/fdk-extension-python.git@v1.0.0#egg=fdk_extension
+fdk_extension@git+https://github.com/gofynd/fdk-extension-python.git@v0.6.0.beta1#egg=fdk_extension
 fdk_client@git+https://github.com/gofynd/fdk-client-python.git@1.0.2#egg=fdk_client
-pydantic[dotenv]
+pydantic[dotenv]~=1.10
 sanic~=22.9
