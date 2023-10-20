@@ -21,6 +21,7 @@ def get_extension_client() -> FdkExtensionClient:
     fdk_extension_client = setup_fdk({
         "api_key": CONFIG.EXTENSION_API_KEY,
         "api_secret": CONFIG.EXTENSION_API_SECRET,
+        "base_url": CONFIG.EXTENSION_BASE_URL,
         "callbacks": {
             "auth": extension_handlers.auth,
             "uninstall": extension_handlers.uninstall
