@@ -11,9 +11,12 @@ const MainService = {
   getTestApi(params = {}) {
     return axios.get(URLS.GET_TEST_API());
   },
-  getAllApplications(params = {}) {
-    return axios.get(URLS.GET_ALL_APPLICATIONS());
+  getAllProducts(params = {}) {
+    return axios.get(URLS.GET_ALL_PRODUCTS());
   },
+  getAllApplicationProducts(params = {}) {
+    return axios.get(URLS.GET_ALL_APPLICATION_PRODUCTS(params.application_id));
+  }
 };
 
 export default MainService;

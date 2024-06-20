@@ -6,7 +6,10 @@ class ExtensionHandlers():
     async def auth(self, request):
         # Writee you code here to return initial launch url after suth process complete
         company_id = int(request.args.get("company_id"))
-        return f"{request.conn_info.ctx.extension.base_url}/company/{company_id}"
+        if request.args.get("application_id"):
+            return f"{request.conn_info.ctx.extension.base_url}/company/{company_id}/application/{request.args.get('application_id')}"
+        else:
+            return f"{request.conn_info.ctx.extension.base_url}/company/{company_id}"
 
     async def uninstall(self, request):
         # Write your code here to cleanup data related to extension

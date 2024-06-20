@@ -9,6 +9,11 @@ const router = createBrowserRouter([
     element: <Home />,
     loader: routeGuard,
   },
+  {
+    path: "/company/:company_id/application/:application_id",
+    element: <Home />,
+    loader: routeGuard,
+  },
 ]);
 
 export default router;
