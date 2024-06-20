@@ -40,6 +40,10 @@ def create_app() -> Sanic:
     async def home_page_handler(request, company_id):
         return await file(os.path.join(BUILD_DIR, "index.html"), headers={"Content-Type": "text/html"})
 
+    @app.get("/company/<company_id>/application/<application_id>")
+    async def home_page_handler(request, company_id, application_id):
+        return await file(os.path.join(BUILD_DIR, "index.html"), headers={"Content-Type": "text/html"})
+
 
     # handle webhook
     @app.post("api/v1.0/webhooks")
