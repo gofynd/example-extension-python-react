@@ -1,18 +1,11 @@
-let company_id = null;
-let application_id = null;
+import { setCompany, setApplication } from '../helper/utils';
 
-export const setCompany = companyId => {
-  company_id = companyId;
-};
-
-export const getCompany = () => {
-  return company_id;
-};
-
-export const setApplication = applicationId => {
-  application_id = applicationId;
-};
-
-export const getApplication = () => {
-  return application_id;
+export const routeGuard = ({params}) => {
+  if (params.company_id) {
+    setCompany(params.company_id);
+  }
+  if (params.application_id) {
+    setApplication(params.application_id);
+  }
+  return null;
 };
